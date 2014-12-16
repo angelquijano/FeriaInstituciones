@@ -26,6 +26,9 @@
 		<table class="signup" border="0" cellpadding="2" cellspacing="15" bgcolor="#eeeeee">
 			<tbody>
 				<tr>
+					<td><input maxlength="10" type="hidden" name="codigoInstitucion"></td>
+				</tr>
+				<tr>
 					<td>Nombre de la institucion</td>
 					<td><input maxlength="70" type="text" name="nombreinstitucion"></td>
 				</tr>

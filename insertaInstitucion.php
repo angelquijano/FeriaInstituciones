@@ -6,7 +6,7 @@
 
 	sesionValida();
 
-
+	$codigoInstitucion  =  $_POST["codigoInstitucion"];
 	$nombreinstitucion  = $_POST["nombreinstitucion"];
 	$nombreproyecto = $_POST["nombreproyecto"];
 	$horasproyecto = $_POST["horasproyecto"];
@@ -26,7 +26,7 @@
 
 	$link = conectaBD();
 
-	$result = mysql_query("INSERT INTO institucion (nombreinstitucion, nombreproyecto, horasproyecto, vacantes, vacantesfinales, descripcionproyecto, contactoinstitucion) VALUES ('" . $nombreinstitucion . "','" . $nombreproyecto . "','" . $horasproyecto . "','" . $vacantesproyecto . "','" . $vacantespermitidasproyecto . "','" . $descripcionproyecto . "','" . $contactoinstitucion . "');", $link);
+	$result = mysql_query("INSERT INTO institucion (codigo,nombreinstitucion, nombreproyecto, horasproyecto, vacantes, vacantesfinales, descripcionproyecto, contactoinstitucion) VALUES ('" . $codigoInstitucion  . "','" . $nombreinstitucion . "','" . $nombreproyecto . "','" . $horasproyecto . "','" . $vacantesproyecto . "','" . $vacantespermitidasproyecto . "','" . $descripcionproyecto . "','" . $contactoinstitucion . "');", $link);
 
 	commitBD($result, $link);
 

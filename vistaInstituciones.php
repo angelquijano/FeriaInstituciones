@@ -12,7 +12,7 @@
 	sesionValida();
 
 
-function presentaInstituciones($num_rows, $codigo, $nombreinstitucion, $nombreproyecto, $horasproyecto, $vacantesproyecto, $vacantespermitidasproyecto, $descripcionproyecto, $contactoinstitucion) {
+function presentaInstituciones($num_rows, $nombreinstitucion, $nombreproyecto, $horasproyecto, $vacantesproyecto, $vacantespermitidasproyecto, $descripcionproyecto, $contactoinstitucion) {
 
 	echo "<h1>Instituciones</h1>";
 	echo "$num_rows Instituciones\n";
@@ -20,7 +20,6 @@ function presentaInstituciones($num_rows, $codigo, $nombreinstitucion, $nombrepr
 	echo "<br />";
 	echo "<table>
 		<thead>
-			<th>Codigo</th>
 			<th>Nombre de la institucion</th>
 			<th>Nombre del proyecto</th>
 			<th>Horas</th>
@@ -37,7 +36,6 @@ function presentaInstituciones($num_rows, $codigo, $nombreinstitucion, $nombrepr
 
 	while($pos_row < $num_rows){
 		echo "<tr>";
-		echo "<td>". $codigo [$pos_row] . "</td>";
 		echo "<td>". $nombreinstitucion [$pos_row] . "</td>";
 		echo "<td>". $nombreproyecto [$pos_row] . "</td>";
 		echo "<td>". $horasproyecto [$pos_row] . "</td>";

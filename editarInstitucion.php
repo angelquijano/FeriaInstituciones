@@ -11,9 +11,11 @@
 	$link = conectaBD();
 	
 	$query = "SELECT nombreinstitucion, nombreproyecto, horasproyecto, vacantes, vacantespermitidas, descripcionproyecto, contactoinstitucion FROM Institucion WHERE codigo = '" . $codigoInstitucion . "'";
+
 	$result = mysql_query($query, $link);
 
 	$fila = mysql_fetch_row($result);
+
 	$nombreinstitucion = $fila[0];
 	$nombreproyecto = $fila[1];
 	$horasproyecto = $fila[2];
@@ -34,10 +36,8 @@
 		<table>
 			<tbody>
 				<tr>
-					<td>Codigo</td>
 					<td>
-						<?php echo $codigoInstitucion; ?>
-						<input type="hidden" name="codigoInstitucion" value="<?php echo $codigoInstitucion; ?>" />
+						<input type="hidden" name="codigoInstitucion"  />
 					</td>
 				</tr>
 				<tr>
