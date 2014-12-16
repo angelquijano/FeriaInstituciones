@@ -6,15 +6,21 @@
 	sesionValida();
 
 
-	$claveCurso  = $_GET[claveCurso];
+	$codigoInstitucion  = $_GET[codigoInstitucion];
 	
 	$link = conectaBD();
 	
-	$query = "SELECT nombre FROM curso WHERE clave = '" . $claveCurso . "'";
+	$query = "SELECT nombreinstitucion, nombreproyecto, horasproyecto, vacantes, vacantespermitidas, descripcionproyecto, contactoinstitucion FROM Institucion WHERE codigo = '" . $codigoInstitucion . "'";
 	$result = mysql_query($query, $link);
-//	echo $query;
+
 	$fila = mysql_fetch_row($result);
-	$nombreCurso = $fila[0];
+	$nombreinstitucion = $fila[0];
+	$nombreproyecto = $fila[1];
+	$horasproyecto = $fila[2];
+	$vacantes = $fila[3];
+	$vacantespermitidas = $fila[4];
+	$descripcionproyecto = $fila[5];
+	$contactoinstitucion = $fila[6];
 ?>
 
 <html>
@@ -22,24 +28,48 @@
 </head>
 
 <body>
-	<h1>Modificar un curso</h1>
+	<h1>Modificar una Institucion</h1>
 	<br>
-	<form action="actualizaCurso.php" method="POST">
+	<form action="actualizaInstitucion.php" method="POST">
 		<table>
 			<tbody>
 				<tr>
-					<td>Clave</td>
+					<td>Codigo</td>
 					<td>
-						<?php echo $claveCurso; ?>
-						<input type="hidden" name="claveCurso" value="<?php echo $claveCurso; ?>" />
+						<?php echo $codigoInstitucion; ?>
+						<input type="hidden" name="codigoInstitucion" value="<?php echo $codigoInstitucion; ?>" />
 					</td>
 				</tr>
 				<tr>
-					<td>Nombre</td>
-					<td><input maxlength="50" type="text" name="nombreCurso" value="<?php echo $nombreCurso; ?>" /></td>
+					<td>Nombre de la institucion</td>
+					<td><input maxlength="70" type="text" name="nombreinstitucion" value="<?php echo $nombreinstitucion; ?>" /></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" value="Actualizar Curso <?php echo $claveCurso; ?>" /></td>
+					<td>Nombre del proyecto</td>
+					<td><input maxlength="70" type="text" name="nombreproyecto" value="<?php echo $nombreproyecto; ?>" /></td>
+				</tr>
+				<tr>
+					<td>Horas del proyecto</td>
+					<td><input maxlength="3" type="text" name="horasproyecto" value="<?php echo $horasproyecto; ?>" /></td>
+				</tr>
+				<tr>
+					<td>Vacantes</td>
+					<td><input maxlength="3" type="text" name="vacantesproyecto" value="<?php echo $vacantes; ?>" /></td>
+				</tr>
+				<tr>
+					<td>Vacantes permitidas</td>
+					<td><input maxlength="3" type="text" name="vacantespermitidasproyecto" value="<?php echo $vacantespermitidas; ?>" /></td>
+				</tr>
+				<tr>
+					<td>Descripcion del proyecto</td>
+					<td><input maxlength="500" type="text" name="descripcionproyecto" value="<?php echo $descripcionproyecto; ?>" /></td>
+				</tr>
+				<tr>
+					<td>Contacto de la institucion</td>
+					<td><input maxlength="500" type="text" name="contactoinstitucion" value="<?php echo $contactoinstitucion; ?>" /></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" value="Actualizar Institucion" /></td>
 				</tr>
 			</tbody>
 		</table>

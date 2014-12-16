@@ -9,15 +9,17 @@
 	$link = conectaBD();
 
 
-	$claveCurso  = $_GET[claveCurso];
+	$codigoInstitucion  = $_GET[codigoInstitucion];
 
-	$result = mysql_query("DELETE FROM curso WHERE clave = '" . $claveCurso . "'", $link);
+	$result = mysql_query("DELETE FROM institucion WHERE codigo = '" . $codigoInstitucion . "'", $link);
 
 	commitBD($result, $link);
+
+	mysql_close($link);
 
 	echo "<br />";
 	echo "<br />";
 	echo "<a href='menu.php'> Regresar a menu </a>";
-	mysql_close($link);
+	
 
 ?>
