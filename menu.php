@@ -22,7 +22,7 @@
 				</tr>
 				<tr>
 					<td>2. </td>
-					<td><a href='cursos_2.php'> Modificar o eliminar Instituciones </a></td>
+					<td><a href='accionVistaInstituciones.php'> Modificar o eliminar Instituciones </a></td>
 				</tr>
 				<tr>
 					<td>3. </td>
