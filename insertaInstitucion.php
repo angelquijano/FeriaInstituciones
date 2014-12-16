@@ -1,4 +1,4 @@
-<?php
+ <?php
 
 	include_once "insertaMySQL.php";
 	include_once "validaSesion.php";
@@ -26,7 +26,7 @@
 
 	$link = conectaBD();
 
-	$result = mysql_query("INSERT INTO institucion(nombreinstitucion, nombreproyecto, horasproyecto, vacantes, vacantesfinales, descripcionproyecto, contactoinstitucion) VALUES ('" . $nombreinstitucion . "','" . $nombreproyecto . "''" . $horasproyecto . "','" . $vacantesproyecto . "','" . $vacantespermitidasproyecto . "','" . $descripcionproyecto . "','" . $contactoinstitucion . "');", $link);
+	$result = mysql_query("INSERT INTO institucion (nombreinstitucion, nombreproyecto, horasproyecto, vacantes, vacantesfinales, descripcionproyecto, contactoinstitucion) VALUES ('" . $nombreinstitucion . "','" . $nombreproyecto . "','" . $horasproyecto . "','" . $vacantesproyecto . "','" . $vacantespermitidasproyecto . "','" . $descripcionproyecto . "','" . $contactoinstitucion . "');", $link);
 
 	commitBD($result, $link);
 
