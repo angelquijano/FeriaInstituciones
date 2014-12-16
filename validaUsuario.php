@@ -1,7 +1,7 @@
 <?php
 
 	$link = mysql_connect("localhost", "root", "");
-	mysql_select_db("escolar", $link);
+	mysql_select_db("feriainstituciones", $link);
 
 	if ((isset($_POST[usuario]) && $_POST[usuario] != "") && (isset($_POST[contrasena]) && $_POST[contrasena] != "")) {
 
