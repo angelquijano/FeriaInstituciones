@@ -36,13 +36,13 @@ function presentaInstituciones($num_rows, $nombreinstitucion, $nombreproyecto, $
 
 	while($pos_row < $num_rows){
 		echo "<tr>";
-		echo "<td>". $nombreinstitucion[$pos_row] . "</td>";
-		echo "<td>". $nombreproyecto[$pos_row] . "</td>";
-		echo "<td>". $horasproyecto . "</td>";
-		echo "<td>". $vacantesproyecto[$pos_row] . "</td>";
-		echo "<td>". $vacantespermitidasproyecto[$pos_row] . "</td>";
-		echo "<td>". $descripcionproyecto[$pos_row] . "</td>";
-		echo "<td>". $contactoinstitucion[$pos_row] . "</td>";
+		echo "<td>". $nombreinstitucion [$pos_row] . "</td>";
+		echo "<td>". $nombreproyecto [$pos_row] . "</td>";
+		echo "<td>". $horasproyecto [$pos_row] . "</td>";
+		echo "<td>". $vacantesproyecto [$pos_row] . "</td>";
+		echo "<td>". $vacantespermitidasproyecto [$pos_row] . "</td>";
+		echo "<td>". $descripcionproyecto [$pos_row] . "</td>";
+		echo "<td>". $contactoinstitucion [$pos_row] . "</td>";
 		echo "<td><a href='editarInstitucion.php?claveCurso=" . $codigo[$pos_row] . "' />Editar</a></td>";
 		echo "<td><a href='eliminaInstitucion.php?claveCurso=" . $codigo[$pos_row] . "' />Eliminar</a></td>";	
 		echo "</tr>";
