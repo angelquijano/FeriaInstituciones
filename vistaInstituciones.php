@@ -43,8 +43,8 @@ function presentaInstituciones($num_rows, $nombreinstitucion, $nombreproyecto, $
 		echo "<td>". $vacantespermitidasproyecto [$pos_row] . "</td>";
 		echo "<td>". $descripcionproyecto [$pos_row] . "</td>";
 		echo "<td>". $contactoinstitucion [$pos_row] . "</td>";
-		echo "<td><a href='editarInstitucion.php? codigoInstitucion=" . $codigo[$pos_row] . "' />Editar</a></td>";
-		echo "<td><a href='eliminaInstitucion.php? codigoInstitucion=" . $codigo[$pos_row] . "' />Eliminar</a></td>";	
+		echo "<td><a href='editarInstitucion.php?codigoInstitucion=" . $codigo[$pos_row] . "' />Editar</a></td>";
+		echo "<td><a href='eliminaInstitucion.php?codigoInstitucion=" . $codigo[$pos_row] . "' />Eliminar</a></td>";	
 		echo "</tr>";
 
 		$pos_row = $pos_row + 1;
